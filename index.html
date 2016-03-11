@@ -3,578 +3,549 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
         <title>FRETULATOR</title>
-
         <link rel="stylesheet" href="styles/fretulator.css">
-</head>
-
+    </head>
     <body>
-
-
-
-
-<div class="header relative">
-  <span><span style="color:red">B A S S</span> F R E T U L A T O R<span>
-  <!--
-    <button style="position:absolute;right:30px;top:0px;" onclick="resetFretulator();">Reset</button>
-  -->
-</div>
-    
-<div class="fretboardwrapper xshownotes fretnotes bg-highlight" style="padding:40px 0">
-    
-<div class="line" style="width:1080px;margin:0 auto">
-  <div class="unit stringtuner" style="margin-top:20px;">
-    <select class="js_stringtuning st1" id="string1tuning" data-value="string1">
-      <option value="1">C</option>
-      <option value="2">C#</option>
-      <option value="3">D</option>
-      <option value="4">D#</option>
-      <option value="5" selected="selected">E</option>
-      <option value="6">F</option>
-      <option value="7">F#</option>
-      <option value="8">G</option>
-      <option value="9">G#</option>
-      <option value="10">A</option>
-      <option value="11">A#</option>
-      <option value="12">H</option>
-    </select>
-    <select class="js_stringtuning st2" id="string2tuning" data-value="string2">
-      <option value="1">C</option>
-      <option value="2">C#</option>
-      <option value="3">D</option>
-      <option value="4">D#</option>
-      <option value="5">E</option>
-      <option value="6">F</option>
-      <option value="7">F#</option>
-      <option value="8">G</option>
-      <option value="9">G#</option>
-      <option value="10" selected="selected">A</option>
-      <option value="11">A#</option>
-      <option value="12">H</option>
-    </select>
-    <select class="js_stringtuning st3" id="string3tuning" data-value="string3">
-      <option value="1">C</option>
-      <option value="2">C#</option>
-      <option value="3" selected="selected">D</option>
-      <option value="4">D#</option>
-      <option value="5">E</option>
-      <option value="6">F</option>
-      <option value="7">F#</option>
-      <option value="8">G</option>
-      <option value="9">G#</option>
-      <option value="10">A</option>
-      <option value="11">A#</option>
-      <option value="12">H</option>
-    </select>
-    <select class="js_stringtuning st4" id="string4tuning" data-value="string4">
-      <option value="1">C</option>
-      <option value="2">C#</option>
-      <option value="3">D</option>
-      <option value="4">D#</option>
-      <option value="5">E</option>
-      <option value="6">F</option>
-      <option value="7">F#</option>
-      <option value="8" selected="selected">G</option> 
-      <option value="9">G#</option>
-      <option value="10">A</option>
-      <option value="11">A#</option>
-      <option value="12">H</option>
-    </select>
-  </div>
-  <div class="unit">
-    <div class="line fretdec">
-      <div class="unit">1</div>
-      <div class="unit">2</div>
-      <div class="unit"><div class="fret-dot"></div></div>
-      <div class="unit">4</div>
-      <div class="unit"><div class="fret-dot"></div></div>
-      <div class="unit">6</div>
-      <div class="unit"><div class="fret-dot"></div></div>
-      <div class="unit">8</div>
-      <div class="unit"><div class="fret-dot"></div></div>
-      <div class="unit">10</div>
-      <div class="unit">11</div>
-      <div class="unit"><div class="fret-dot"></div> <div class="fret-dot"></div></div>
-    </div>
-    <div class="fretboard bg-multigrad" style="position:relative">
+      <div class="header relative">
+        <span><span style="color:red">B A S S</span> F R E T U L A T O R</span>
+        <!--
+          <button style="position:absolute;right:30px;top:0px;" onclick="resetFretulator();">Reset</button>
+        -->
+      </div>
+      <div class="fretboardwrapper xshownotes fretnotes bg-highlight" style="padding:40px 0">
+        <div class="line" style="width:1080px;margin:0 auto">
+          <div class="unit stringtuner" style="margin-top:20px;">
+            <select class="js_stringtuning st1" id="string1tuning" data-value="string1">
+              <option value="1">C</option>
+              <option value="2">C#</option>
+              <option value="3">D</option>
+              <option value="4">D#</option>
+              <option value="5" selected="selected">E</option>
+              <option value="6">F</option>
+              <option value="7">F#</option>
+              <option value="8">G</option>
+              <option value="9">G#</option>
+              <option value="10">A</option>
+              <option value="11">A#</option>
+              <option value="12">H</option>
+            </select>
+            <select class="js_stringtuning st2" id="string2tuning" data-value="string2">
+              <option value="1">C</option>
+              <option value="2">C#</option>
+              <option value="3">D</option>
+              <option value="4">D#</option>
+              <option value="5">E</option>
+              <option value="6">F</option>
+              <option value="7">F#</option>
+              <option value="8">G</option>
+              <option value="9">G#</option>
+              <option value="10" selected="selected">A</option>
+              <option value="11">A#</option>
+              <option value="12">H</option>
+            </select>
+            <select class="js_stringtuning st3" id="string3tuning" data-value="string3">
+              <option value="1">C</option>
+              <option value="2">C#</option>
+              <option value="3" selected="selected">D</option>
+              <option value="4">D#</option>
+              <option value="5">E</option>
+              <option value="6">F</option>
+              <option value="7">F#</option>
+              <option value="8">G</option>
+              <option value="9">G#</option>
+              <option value="10">A</option>
+              <option value="11">A#</option>
+              <option value="12">H</option>
+            </select>
+            <select class="js_stringtuning st4" id="string4tuning" data-value="string4">
+              <option value="1">C</option>
+              <option value="2">C#</option>
+              <option value="3">D</option>
+              <option value="4">D#</option>
+              <option value="5">E</option>
+              <option value="6">F</option>
+              <option value="7">F#</option>
+              <option value="8" selected="selected">G</option> 
+              <option value="9">G#</option>
+              <option value="10">A</option>
+              <option value="11">A#</option>
+              <option value="12">H</option>
+            </select>
+          </div>
+          <div class="unit">
+            <div class="line fretdec">
+              <div class="unit">1</div>
+              <div class="unit">2</div>
+              <div class="unit"><div class="fret-dot"></div></div>
+              <div class="unit">4</div>
+              <div class="unit"><div class="fret-dot"></div></div>
+              <div class="unit">6</div>
+              <div class="unit"><div class="fret-dot"></div></div>
+              <div class="unit">8</div>
+              <div class="unit"><div class="fret-dot"></div></div>
+              <div class="unit">10</div>
+              <div class="unit">11</div>
+              <div class="unit"><div class="fret-dot"></div> <div class="fret-dot"></div></div>
+            </div>
+            <div class="fretboard bg-multigrad" style="position:relative">
       
-      <div id="activeNotes" class="">
-      <div class="line string string1 string-t2">
-        <div class="unit fret hidden">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Cs">C#</div> 
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret hidden"> 
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted H">H</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Cs">C#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted H">H</div>
-        </div>
-      </div>
-      <div class="line string string2 string-t3">
-        <div class="unit fret hidden">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Cs">C#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted H">H</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Cs">C#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted H">H</div>
-        </div>
-      </div>
-      <div class="line string string3 string-t4">
-        <div class="unit fret hidden">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Cs">C#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted H">H</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Cs">C#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted H">H</div>
-        </div>
-      </div>
-      <div class="line string string4 string-t5">
-        <div class="unit fret hidden">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Cs">C#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted H">H</div> 
-        </div>
-        <div class="unit fret">
-          <div class="fretted C">C</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Cs">C#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted D">D</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Ds">D#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted E">E</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted F">F</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted Fs">F#</div>
-        </div>
-        <div class="unit fret">
-          <div class="fretted G">G</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted Gs">G#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted A">A</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted As">A#</div>
-        </div>
-        <div class="unit fret hidden">
-          <div class="fretted H">H</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-  <div style="clear:both"></div> 
-</div>
-    
-    
-    <div class="page">
-
-      <div class="panel notes" style="width:460px;margin:30px auto;">
-        <div class="inner bg-panel1">
-          <div class="bd relative" style="padding: 0 0 17px 0 ">
-            <h2 class="panel-title">INDIVIDUAL  NOTES</h2>
-            <div style="text-align:center">
-
-          
-            <div class="active-notes" style="inline-block">
-              <div class="slide-wrap C">
-                <div class="slide-check">  
-                  <input type="checkbox" value="C" id="C" name="check" />
-                  <label for="C"></label>
+              <div id="activeNotes" class="">
+                <div class="line string string1 string-t2">
+                  <div class="unit fret hidden">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Cs">C#</div> 
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret hidden"> 
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted H">H</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted H">H</div>
+                  </div>
                 </div>
-                <span class="indicator">C</span>
-</div>
-<div class="slide-wrap Cs">
-  <div class="slide-check">
-    <input type="checkbox" value="Cs" id="Cs" name="check" />
-    <label for="Cs"></label>
-  </div>
-  <span class="indicator">C#</span>
-</div>
-<div class="slide-wrap D">
-  <div class="slide-check">
-    <input type="checkbox" value="D" id="D" name="check" />
-    <label for="D"></label>
-  </div>
-  <span class="indicator">D</span>
-</div>
-<div class="slide-wrap Ds">
-  <div class="slide-check">
-    <input type="checkbox" value="Ds" id="Ds" name="check" />
-    <label for="Ds"></label>
-  </div>
-  <span class="indicator">D#</span>
-</div>
-<div class="slide-wrap E">
-  <div class="slide-check">
-    <input type="checkbox" value="E" id="E" name="check" />
-    <label for="E"></label>
-  </div>
-  <span class="indicator">E</span>
-</div>
-<div class="slide-wrap F">
-  <div class="slide-check">
-    <input type="checkbox" value="F" id="F" name="check" />
-    <label for="F"></label>
-  </div>
-  <span class="indicator">F</span>
-</div>
-<div class="slide-wrap Fs">
-  <div class="slide-check">
-    <input type="checkbox" value="Fs" id="Fs" name="check" />
-    <label for="Fs"></label>
-  </div>
-  <span class="indicator">F#</span>
-</div>
-<div class="slide-wrap G">
-  <div class="slide-check">
-    <input type="checkbox" value="G" id="G" name="check" />
-    <label for="G"></label>
-  </div>
-  <span class="indicator">G</span>
-</div>
-<div class="slide-wrap Gs">
-  <div class="slide-check">
-    <input type="checkbox" value="Gs" id="Gs" name="check" />
-    <label for="Gs"></label>
-  </div>
-  <span class="indicator">G#</span> 
-</div>
-<div class="slide-wrap A">
-  <div class="slide-check">
-    <input type="checkbox" value="A" id="A" name="check" />
-    <label for="A"></label>
-  </div>
-  <span class="indicator">A</span>
-</div>
-<div class="slide-wrap As">
-  <div class="slide-check">
-    <input type="checkbox" value="As" id="As" name="check" />
-    <label for="As"></label>
-  </div>
-  <span class="indicator">A#</span>
-</div>
-<div class="slide-wrap H">
-  <div class="slide-check">
-    <input type="checkbox" value="H" id="H" name="check" />
-    <label for="H"></label>
-  </div>
-  <span class="indicator">H</span>
-</div>
-
-
-</div>
-
-</div>
-</div>
-</div>
-
-
-<div class="panel notes">
-  <div class="inner bg-panel1">
-    <div class="bd relative">
-      <h2 class="panel-title">BLUES SCALE</h2>
-      <div class="centerify" style="text-align: center;"> 
-        <p>
-          <button class="scaleButton" data-value="Croot,C,Ds,F,Fs,G,As">C</button> 
-          <button class="scaleButton" data-value="Csroot,Cs,E,Fs,G,Gs,H">C#</button>
-          <button class="scaleButton" data-value="Droot,D,F,G,Gs,A,C">D</button>
-          <button class="scaleButton" data-value="Dsroot,Ds,Fs,Gs,A,As,Cs">D#</button>
-          <button class="scaleButton" data-value="Eroot,E,G,A,As,H,D">E</button>
-          <button class="scaleButton" data-value="Froot,Gs,As,H,C,Ds,F">F</button>
-          <button class="scaleButton" data-value="Fsroot,A,H,C,Cs,E,Fs">F#</button>
-          <button class="scaleButton" data-value="Groot,G,As,C,Cs,D,F">G</button>
-          <button class="scaleButton" data-value="Gsroot,Gs,H,Cs,D,Ds,Fs">G#</button>
-          <button class="scaleButton" data-value="Aroot,A,C,D,Ds,E,G">A</button>
-          <button class="scaleButton" data-value="Asroot,As,Cs,Ds,E,F,Gs">A#</button>
-          <button class="scaleButton" data-value="Hroot,H,D,E,F,Fs,A">H</button>
-        </p>
+                <div class="line string string2 string-t3">
+                  <div class="unit fret hidden">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted H">H</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted H">H</div>
+                  </div>
+                </div>
+                <div class="line string string3 string-t4">
+                  <div class="unit fret hidden">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted H">H</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted H">H</div>
+                  </div>
+                </div>
+                <div class="line string string4 string-t5">
+                  <div class="unit fret hidden">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted H">H</div> 
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted H">H</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="clear:both"></div> 
       </div>
-    
-    
-  
-      <div class="absolute hidden">
-        <p>Chords Major</p>
+
+      <div class="page">
+        <div class="panel notes" style="width:460px;margin:30px auto;">
+          <div class="inner bg-panel1">
+            <div class="bd relative" style="padding: 0 0 17px 0 ">
+              <h2 class="panel-title">INDIVIDUAL  NOTES</h2>
+              <div style="text-align:center">
+                <div class="active-notes" style="inline-block">
+                  <div class="slide-wrap C">
+                  <div class="slide-check">  
+                    <input type="checkbox" value="C" id="C" name="check" />
+                    <label for="C"></label>
+                  </div>
+                  <span class="indicator">C</span>
+                </div>
+                <div class="slide-wrap Cs">
+                  <div class="slide-check">
+                    <input type="checkbox" value="Cs" id="Cs" name="check" />
+                    <label for="Cs"></label>
+                  </div>
+                  <span class="indicator">C#</span>
+                </div>
+                <div class="slide-wrap D">
+                  <div class="slide-check">
+                    <input type="checkbox" value="D" id="D" name="check" />
+                    <label for="D"></label>
+                  </div>
+                  <span class="indicator">D</span>
+                </div>
+                <div class="slide-wrap Ds">
+                  <div class="slide-check">
+                    <input type="checkbox" value="Ds" id="Ds" name="check" />
+                    <label for="Ds"></label>
+                  </div>
+                  <span class="indicator">D#</span>
+                </div>
+                <div class="slide-wrap E">
+                  <div class="slide-check">
+                    <input type="checkbox" value="E" id="E" name="check" />
+                    <label for="E"></label>
+                  </div>
+                  <span class="indicator">E</span>
+                </div>
+                <div class="slide-wrap F">
+                  <div class="slide-check">
+                    <input type="checkbox" value="F" id="F" name="check" />
+                    <label for="F"></label>
+                  </div>
+                  <span class="indicator">F</span>
+                </div>
+                <div class="slide-wrap Fs">
+                  <div class="slide-check">
+                    <input type="checkbox" value="Fs" id="Fs" name="check" />
+                    <label for="Fs"></label>
+                  </div>
+                  <span class="indicator">F#</span>
+                </div>
+                <div class="slide-wrap G">
+                  <div class="slide-check">
+                    <input type="checkbox" value="G" id="G" name="check" />
+                    <label for="G"></label>
+                  </div>
+                  <span class="indicator">G</span>
+                </div>
+                <div class="slide-wrap Gs">
+                  <div class="slide-check">
+                    <input type="checkbox" value="Gs" id="Gs" name="check" />
+                    <label for="Gs"></label>
+                  </div>
+                  <span class="indicator">G#</span> 
+                </div>
+                <div class="slide-wrap A">
+                  <div class="slide-check">
+                    <input type="checkbox" value="A" id="A" name="check" />
+                    <label for="A"></label>
+                  </div>
+                  <span class="indicator">A</span>
+                </div>
+                <div class="slide-wrap As">
+                  <div class="slide-check">
+                    <input type="checkbox" value="As" id="As" name="check" />
+                    <label for="As"></label>
+                  </div>
+                  <span class="indicator">A#</span>
+                </div>
+                <div class="slide-wrap H">
+                  <div class="slide-check">
+                    <input type="checkbox" value="H" id="H" name="check" />
+                    <label for="H"></label>
+                  </div>
+                  <span class="indicator">H</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel notes">
+          <div class="inner bg-panel1">
+            <div class="bd relative">
+              <h2 class="panel-title">BLUES SCALE</h2>
+              <div class="centerify" style="text-align: center;"> 
+                <p>
+                  <button class="scaleButton" data-value="Croot,C,Ds,F,Fs,G,As">C</button> 
+                  <button class="scaleButton" data-value="Csroot,Cs,E,Fs,G,Gs,H">C#</button>
+                  <button class="scaleButton" data-value="Droot,D,F,G,Gs,A,C">D</button>
+                  <button class="scaleButton" data-value="Dsroot,Ds,Fs,Gs,A,As,Cs">D#</button>
+                  <button class="scaleButton" data-value="Eroot,E,G,A,As,H,D">E</button>
+                  <button class="scaleButton" data-value="Froot,Gs,As,H,C,Ds,F">F</button>
+                  <button class="scaleButton" data-value="Fsroot,A,H,C,Cs,E,Fs">F#</button>
+                  <button class="scaleButton" data-value="Groot,G,As,C,Cs,D,F">G</button>
+                  <button class="scaleButton" data-value="Gsroot,Gs,H,Cs,D,Ds,Fs">G#</button>
+                  <button class="scaleButton" data-value="Aroot,A,C,D,Ds,E,G">A</button>
+                  <button class="scaleButton" data-value="Asroot,As,Cs,Ds,E,F,Gs">A#</button>
+                  <button class="scaleButton" data-value="Hroot,H,D,E,F,Fs,A">H</button>
+                </p>
+              </div>
+              <div class="absolute hidden">
+                <p>Chords Major</p>
+              </div>
+              <div class="centerify hidden">
+                <p>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G,H">C7</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel notes hidden">
+          <div class="inner bg-panel1">
+            <div class="bd relative">
+              <h2 class="panel-title">MAJOR SCALE</h2>
+              <div class="centerify" style="text-align: center;"> 
+                <p>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button> 
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                  <button class="scaleButton" data-value="Croot,C,E,G">C</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="centerify hidden">
-        <p>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G,H">C7</button>
-        </p>
-      </div>
-      
     </div>
-  </div>
-</div>
-
-        
-
-<div class="panel notes hidden">
-  <div class="inner bg-panel1">
-    <div class="bd relative">
-      <h2 class="panel-title">MAJOR SCALE</h2>
-      <div class="centerify" style="text-align: center;"> 
-        <p>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button> 
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-          <button class="scaleButton" data-value="Croot,C,E,G">C</button>
-        </p>
-      </div>
-    
-    </div>
-  </div>
-</div>
-
-        
-        
-        
-</div>
     <script src="js/fretulator.js"></script>
-</body>
+  </body>
 </html>

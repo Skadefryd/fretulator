@@ -21,30 +21,16 @@
               <option value="2">C#</option>
               <option value="3">D</option>
               <option value="4">D#</option>
-              <option value="5" selected="selected">E</option>
+              <option value="5">E</option>
               <option value="6">F</option>
               <option value="7">F#</option>
-              <option value="8">G</option>
+              <option value="8" selected="selected">G</option>
               <option value="9">G#</option>
               <option value="10">A</option>
               <option value="11">A#</option>
               <option value="12">H</option>
             </select>
             <select class="js_stringtuning st2" id="string2tuning" data-value="string2">
-              <option value="1">C</option>
-              <option value="2">C#</option>
-              <option value="3">D</option>
-              <option value="4">D#</option>
-              <option value="5">E</option>
-              <option value="6">F</option>
-              <option value="7">F#</option>
-              <option value="8">G</option>
-              <option value="9">G#</option>
-              <option value="10" selected="selected">A</option>
-              <option value="11">A#</option>
-              <option value="12">H</option>
-            </select>
-            <select class="js_stringtuning st3" id="string3tuning" data-value="string3">
               <option value="1">C</option>
               <option value="2">C#</option>
               <option value="3" selected="selected">D</option>
@@ -58,7 +44,7 @@
               <option value="11">A#</option>
               <option value="12">H</option>
             </select>
-            <select class="js_stringtuning st4" id="string4tuning" data-value="string4">
+            <select class="js_stringtuning st3" id="string3tuning" data-value="string3">
               <option value="1">C</option>
               <option value="2">C#</option>
               <option value="3">D</option>
@@ -66,7 +52,21 @@
               <option value="5">E</option>
               <option value="6">F</option>
               <option value="7">F#</option>
-              <option value="8" selected="selected">G</option> 
+              <option value="8">G</option>
+              <option value="9">G#</option>
+              <option value="10" selected="selected">A</option>
+              <option value="11">A#</option>
+              <option value="12">H</option>
+            </select>
+            <select class="js_stringtuning st4" id="string4tuning" data-value="string4">
+              <option value="1">C</option>
+              <option value="2">C#</option>
+              <option value="3">D</option>
+              <option value="4">D#</option>
+              <option value="5" selected="selected">E</option>
+              <option value="6">F</option>
+              <option value="7">F#</option>
+              <option value="8">G</option> 
               <option value="9">G#</option>
               <option value="10">A</option>
               <option value="11">A#</option>
@@ -91,7 +91,7 @@
             <div class="fretboard bg-multigrad" style="position:relative">
       
               <div id="activeNotes" class="">
-                <div class="line string string1 string-t2">
+                <div class="line string string1 string-t5">
                   <div class="unit fret hidden">
                     <div class="fretted C">C</div>
                   </div>
@@ -107,13 +107,13 @@
                   <div class="unit fret hidden">
                     <div class="fretted E">E</div>
                   </div>
-                  <div class="unit fret">
+                  <div class="unit fret hidden">
                     <div class="fretted F">F</div>
                   </div>
-                  <div class="unit fret">
+                  <div class="unit fret hidden">
                     <div class="fretted Fs">F#</div>
                   </div>
-                  <div class="unit fret">
+                  <div class="unit fret hidden">
                     <div class="fretted G">G</div>
                   </div>
                   <div class="unit fret">
@@ -143,13 +143,13 @@
                   <div class="unit fret">
                     <div class="fretted E">E</div>
                   </div>
-                  <div class="unit fret hidden">
+                  <div class="unit fret">
                     <div class="fretted F">F</div>
                   </div>
-                  <div class="unit fret hidden">
+                  <div class="unit fret">
                     <div class="fretted Fs">F#</div>
                   </div>
-                  <div class="unit fret hidden">
+                  <div class="unit fret">
                     <div class="fretted G">G</div>
                   </div>
                   <div class="unit fret hidden">
@@ -165,81 +165,7 @@
                     <div class="fretted H">H</div>
                   </div>
                 </div>
-                <div class="line string string2 string-t3">
-                  <div class="unit fret hidden">
-                    <div class="fretted C">C</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted Cs">C#</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted D">D</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted Ds">D#</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted E">E</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted F">F</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted Fs">F#</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted G">G</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted Gs">G#</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted A">A</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted As">A#</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted H">H</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted C">C</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted Cs">C#</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted D">D</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted Ds">D#</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted E">E</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted F">F</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted Fs">F#</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted G">G</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted Gs">G#</div>
-                  </div>
-                  <div class="unit fret">
-                    <div class="fretted A">A</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted As">A#</div>
-                  </div>
-                  <div class="unit fret hidden">
-                    <div class="fretted H">H</div>
-                  </div>
-                </div>
-                <div class="line string string3 string-t4">
+                <div class="line string string2 string-t4">
                   <div class="unit fret hidden">
                     <div class="fretted C">C</div>
                   </div>
@@ -313,7 +239,7 @@
                     <div class="fretted H">H</div>
                   </div>
                 </div>
-                <div class="line string string4 string-t5">
+                <div class="line string string3 string-t3">
                   <div class="unit fret hidden">
                     <div class="fretted C">C</div>
                   </div>
@@ -336,6 +262,80 @@
                     <div class="fretted Fs">F#</div>
                   </div>
                   <div class="unit fret hidden">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted H">H</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted G">G</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Gs">G#</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted A">A</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted As">A#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted H">H</div>
+                  </div>
+                </div>
+                <div class="line string string4 string-t2">
+                  <div class="unit fret hidden">
+                    <div class="fretted C">C</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Cs">C#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted D">D</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted Ds">D#</div>
+                  </div>
+                  <div class="unit fret hidden">
+                    <div class="fretted E">E</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted F">F</div>
+                  </div>
+                  <div class="unit fret">
+                    <div class="fretted Fs">F#</div>
+                  </div>
+                  <div class="unit fret">
                     <div class="fretted G">G</div>
                   </div>
                   <div class="unit fret">
@@ -365,13 +365,13 @@
                   <div class="unit fret">
                     <div class="fretted E">E</div>
                   </div>
-                  <div class="unit fret">
+                  <div class="unit fret hidden">
                     <div class="fretted F">F</div>
                   </div>
-                  <div class="unit fret">
+                  <div class="unit fret hidden">
                     <div class="fretted Fs">F#</div>
                   </div>
-                  <div class="unit fret">
+                  <div class="unit fret hidden">
                     <div class="fretted G">G</div>
                   </div>
                   <div class="unit fret hidden">
